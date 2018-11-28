@@ -11,7 +11,7 @@ etc. of this implementation before using in a production environment.
 # QGIS Server documentation
 
 Please see the [canonical documentation](
-http://docs.qgis.org/2.18/en/docs/user_manual/working_with_ogc/ogc_server_support.html)
+http://docs.qgis.org/testing/en/docs/user_manual/working_with_ogc/ogc_server_support.html)
 for QGIS Server if you need more general info on how QGIS Server works.
 
 
@@ -44,7 +44,7 @@ You can build the image yourself like this:
 
 ```
 git clone git://github.com/kartoza/docker-qgis-server
-cd docker-qgis-server/2.18
+cd docker-qgis-server/3.4
 docker build -t kartoza/qgis-server .
 ```
 
@@ -132,7 +132,7 @@ use the following info:
 * password: docker
 
 Please see the [provided docker-compose](https://github.com/kartoza/docker-qgis-server/blob/develop/docker-compose.yml) example which 
-includes examples for both QGIS Server 2/LTR and QGIS Server 3.
+includes examples for both QGIS Server 2 and QGIS Server 3/LTR.
 
 
 
@@ -162,15 +162,15 @@ or docker run command.
 ```
 QGIS_DEBUG 5
 QGIS_LOG_FILE /proc/self/fd/1
-QGIS_SERVER_LOG_FILE /proc/self/fd/1
+QGIS_SERVER_LOG_STDERR 1
 QGIS_SERVER_LOG_LEVEL 5
 PGSERVICEFILE /project/pg_service.conf
+QGIS_OPTIONS_PATH /opt/qgis-server/
 QGIS_PROJECT_FILE /project/project.qgs
 QGIS_PLUGINPATH /opt/qgis-server/plugins
 ```
 
-**Note:** please consult the [QGIS Server documentation](https://docs.qgis.org/2.18/en/docs/user_manual/working_with_ogc/server/config.html) for details on the options you 
-can pass to QGIS Server.
+**Note:** please consult the [QGIS Server documentation](https://docs.qgis.org/testing/en/docs/user_manual/working_with_ogc/server/config.html) for details on the options you can pass to QGIS Server.
 
 Probably you will want to mount the /project folder with local volume
 that contains some QGIS projects. As you can see above, if no project

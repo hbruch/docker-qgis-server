@@ -53,11 +53,12 @@ fi
 ## Tag and publish
 ##
 
-#docker tag kartoza/qgis-server:${MAJOR}.${MINOR}.${BUGFIX} kartoza/qgis-server:LTR
+docker tag kartoza/qgis-server:${MAJOR}.${MINOR}.${BUGFIX} kartoza/qgis-server:LTR
 docker tag kartoza/qgis-server:${MAJOR}.${MINOR}.${BUGFIX} kartoza/qgis-server:${MAJOR}.${MINOR}
-#docker tag kartoza/qgis-server:${MAJOR}.${MINOR}.${BUGFIX} kartoza/qgis-server:latest
+docker tag kartoza/qgis-server:${MAJOR}.${MINOR}.${BUGFIX} kartoza/qgis-server:latest
 docker push kartoza/qgis-server:${MAJOR}.${MINOR}.${BUGFIX}
 docker push kartoza/qgis-server:${MAJOR}.${MINOR}
-#docker push kartoza/qgis-server:latest
-#docker push kartoza/qgis-server:LTR
+docker push kartoza/qgis-server:${MAJOR}
+docker push kartoza/qgis-server:latest
+docker push kartoza/qgis-server:LTR
 
