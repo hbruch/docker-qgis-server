@@ -5,6 +5,7 @@
 BUGFIX=24
 MINOR=18
 MAJOR=2
+REPOSITORY=kartoza
 TESTPORT=9909
 # $$ at the end will add a random number to the server
 TESTSERVER=qgis-server-test$$
